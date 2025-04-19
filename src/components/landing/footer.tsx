@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { landingNavLinks } from "@/lib/constants";
-import { LayoutDashboard, Twitter, Github, Linkedin } from "lucide-react";
+import { LayoutDashboard, Github, Linkedin } from "lucide-react";
 
 export default function LandingFooter() {
   return (

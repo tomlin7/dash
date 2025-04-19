@@ -72,7 +72,7 @@ export default function DashboardHeader() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-2">
-                <UserButton afterSignOutUrl="/" />
+                <UserButton />
                 <div className="flex flex-col items-start text-sm leading-none">
                   <span>{user?.firstName}</span>
                 </div>
@@ -83,7 +83,9 @@ export default function DashboardHeader() {
                 <Settings className="mr-2 h-4 w-4" />
                 <span>Settings</span>
               </DropdownMenuItem>
+
               <DropdownMenuSeparator />
+
               <DropdownMenuItem onClick={handleSignOut}>
                 <LogOut className="mr-2 h-4 w-4" />
                 <span>Log out</span>

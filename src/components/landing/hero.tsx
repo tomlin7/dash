@@ -4,10 +4,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import { features } from "@/lib/constants";
-import { Card, CardContent } from "@/components/ui/card";
-import { LucideIcon } from "lucide-react";
-import * as LucideIcons from "lucide-react";
 import { useRef, useEffect } from "react";
 
 export default function LandingHero() {
