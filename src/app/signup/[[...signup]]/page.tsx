@@ -24,7 +24,7 @@ import {
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
 
 export default function SignUpPage() {
@@ -64,7 +64,6 @@ export default function SignUpPage() {
         description: "Please check your inbox and enter the code",
         duration: 5000,
       });
-
       setIsLoading(false);
     } catch (err: any) {
       console.error(err);
@@ -102,9 +101,7 @@ export default function SignUpPage() {
           router.push("/dashboard");
         }, 1000);
       } else {
-        setError(
-          "Verification incompomplete. Additonal steps may be required."
-        );
+        setError("Verification incomplete. Additional steps may be required.");
         toast.warning("Verification incomplete", {
           description:
             "Additional steps may be required to complete verification.",
@@ -154,7 +151,7 @@ export default function SignUpPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-fulll max-w-md"
+          className="w-full max-w-md"
         >
           <div className="mb-8 text-center">
             <Link
@@ -173,7 +170,6 @@ export default function SignUpPage() {
                 Enter the verification code sent to {emailAddress}
               </CardDescription>
             </CardHeader>
-
             <form onSubmit={handleVerify}>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
@@ -192,7 +188,6 @@ export default function SignUpPage() {
                   </div>
                 </div>
               </CardContent>
-
               <CardFooter className="flex flex-col space-y-4">
                 <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? "Verifying..." : "Verify Email"}
@@ -204,7 +199,7 @@ export default function SignUpPage() {
                     onClick={handleResendCode}
                     className="text-primary hover:underline"
                   >
-                    Sign up
+                    Resend code
                   </button>
                 </div>
               </CardFooter>
